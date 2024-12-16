@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.decorator.Controller">
+    <Pane fx:id="paneTree" prefHeight="600" prefWidth="550.0" style="-fx-background-color: white;" />
+
+    <VBox alignment="TOP_CENTER" prefHeight="123.0" prefWidth="550.0" spacing="10">
+        <CheckBox fx:id="starCheckBox" onAction="#addStar" text="Добавить звезду" />
+        <CheckBox fx:id="presentsCheckBox" onAction="#addPresents" text="Добавить подарки" />
+        <CheckBox fx:id="girlandsCheckBox" onAction="#addLights" text="Добавить гирлянду" />
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+              <Button onAction="#addAllDecorations" text="Добавить все декорации">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+            </Button>
+              <Button onAction="#removeAllDecorations" text="Удалить все декорации" />
+         </children>
+      </HBox>
+   
+             <Label fx:id="statusLabel" textFill="black" />
+    </VBox>
+</VBox>
